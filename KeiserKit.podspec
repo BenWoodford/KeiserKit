@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KeiserKit"
-  s.version      = "0.0.1"
+  s.version      = "0.9"
   s.summary      = "Static Library for interfacing with the Keiser M3i Exercise Bike over Bluetooth Low Energy"
 
   s.description  = <<-DESC
-                   This will be a long description one day.
+                   Objective-C Library for reading data from the Keiser M3i Exercise Bike using CoreBluetooth for iOS.
                    DESC
 
     s.homepage     = "https://github.com/BenWoodford/KeiserKit"
