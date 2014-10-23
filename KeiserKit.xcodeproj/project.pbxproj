@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B576AA3C19F91EFD000A46EA /* KeiserKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B576AA3B19F91EFD000A46EA /* KeiserKit.h */; };
+		B576AA3E19F91EFD000A46EA /* KeiserKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B576AA3D19F91EFD000A46EA /* KeiserKit.m */; };
+		B576AA4419F91EFD000A46EA /* libKeiserKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B576AA3819F91EFD000A46EA /* libKeiserKit.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B576AA4519F91EFD000A46EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B576AA3019F91EFD000A46EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B576AA3719F91EFD000A46EA;
+			remoteInfo = KeiserKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B576AA3619F91EFD000A46EA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				B576AA3C19F91EFD000A46EA /* KeiserKit.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B576AA3819F91EFD000A46EA /* libKeiserKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKeiserKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B576AA3B19F91EFD000A46EA /* KeiserKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeiserKit.h; sourceTree = "<group>"; };
+		B576AA3D19F91EFD000A46EA /* KeiserKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeiserKit.m; sourceTree = "<group>"; };
+		B576AA4319F91EFD000A46EA /* KeiserKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeiserKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B576AA4919F91EFD000A46EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B576AA3519F91EFD000A46EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B576AA4019F91EFD000A46EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B576AA4419F91EFD000A46EA /* libKeiserKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B576AA2F19F91EFD000A46EA = {
+			isa = PBXGroup;
+			children = (
+				B576AA3A19F91EFD000A46EA /* KeiserKit */,
+				B576AA4719F91EFD000A46EA /* KeiserKitTests */,
+				B576AA3919F91EFD000A46EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B576AA3919F91EFD000A46EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B576AA3819F91EFD000A46EA /* libKeiserKit.a */,
+				B576AA4319F91EFD000A46EA /* KeiserKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B576AA3A19F91EFD000A46EA /* KeiserKit */ = {
+			isa = PBXGroup;
+			children = (
+				B576AA3B19F91EFD000A46EA /* KeiserKit.h */,
+				B576AA3D19F91EFD000A46EA /* KeiserKit.m */,
+			);
+			path = KeiserKit;
+			sourceTree = "<group>";
+		};
+		B576AA4719F91EFD000A46EA /* KeiserKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				B576AA4819F91EFD000A46EA /* Supporting Files */,
+			);
+			path = KeiserKitTests;
+			sourceTree = "<group>";
+		};
+		B576AA4819F91EFD000A46EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B576AA4919F91EFD000A46EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B576AA3719F91EFD000A46EA /* KeiserKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B576AA4C19F91EFD000A46EA /* Build configuration list for PBXNativeTarget "KeiserKit" */;
+			buildPhases = (
+				B576AA3419F91EFD000A46EA /* Sources */,
+				B576AA3519F91EFD000A46EA /* Frameworks */,
+				B576AA3619F91EFD000A46EA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeiserKit;
+			productName = KeiserKit;
+			productReference = B576AA3819F91EFD000A46EA /* libKeiserKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B576AA4219F91EFD000A46EA /* KeiserKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B576AA4F19F91EFD000A46EA /* Build configuration list for PBXNativeTarget "KeiserKitTests" */;
+			buildPhases = (
+				B576AA3F19F91EFD000A46EA /* Sources */,
+				B576AA4019F91EFD000A46EA /* Frameworks */,
+				B576AA4119F91EFD000A46EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B576AA4619F91EFD000A46EA /* PBXTargetDependency */,
+			);
+			name = KeiserKitTests;
+			productName = KeiserKitTests;
+			productReference = B576AA4319F91EFD000A46EA /* KeiserKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B576AA3019F91EFD000A46EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ben Woodford";
+				TargetAttributes = {
+					B576AA3719F91EFD000A46EA = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					B576AA4219F91EFD000A46EA = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = B576AA3319F91EFD000A46EA /* Build configuration list for PBXProject "KeiserKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B576AA2F19F91EFD000A46EA;
+			productRefGroup = B576AA3919F91EFD000A46EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B576AA3719F91EFD000A46EA /* KeiserKit */,
+				B576AA4219F91EFD000A46EA /* KeiserKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B576AA4119F91EFD000A46EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B576AA3419F91EFD000A46EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B576AA3E19F91EFD000A46EA /* KeiserKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B576AA3F19F91EFD000A46EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B576AA4619F91EFD000A46EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B576AA3719F91EFD000A46EA /* KeiserKit */;
+			targetProxy = B576AA4519F91EFD000A46EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B576AA4A19F91EFD000A46EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B576AA4B19F91EFD000A46EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B576AA4D19F91EFD000A46EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B576AA4E19F91EFD000A46EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B576AA5019F91EFD000A46EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeiserKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B576AA5119F91EFD000A46EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KeiserKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B576AA3319F91EFD000A46EA /* Build configuration list for PBXProject "KeiserKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B576AA4A19F91EFD000A46EA /* Debug */,
+				B576AA4B19F91EFD000A46EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B576AA4C19F91EFD000A46EA /* Build configuration list for PBXNativeTarget "KeiserKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B576AA4D19F91EFD000A46EA /* Debug */,
+				B576AA4E19F91EFD000A46EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B576AA4F19F91EFD000A46EA /* Build configuration list for PBXNativeTarget "KeiserKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B576AA5019F91EFD000A46EA /* Debug */,
+				B576AA5119F91EFD000A46EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B576AA3019F91EFD000A46EA /* Project object */;
+}
