@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B576AA3C19F91EFD000A46EA /* KeiserKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B576AA3B19F91EFD000A46EA /* KeiserKit.h */; };
-		B576AA3E19F91EFD000A46EA /* KeiserKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B576AA3D19F91EFD000A46EA /* KeiserKit.m */; };
+		B576AA3C19F91EFD000A46EA /* KKManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B576AA3B19F91EFD000A46EA /* KKManager.h */; };
+		B576AA3E19F91EFD000A46EA /* KKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B576AA3D19F91EFD000A46EA /* KKManager.m */; };
 		B576AA4419F91EFD000A46EA /* libKeiserKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B576AA3819F91EFD000A46EA /* libKeiserKit.a */; };
+		B576AA5319F920D0000A46EA /* KKBike.m in Sources */ = {isa = PBXBuildFile; fileRef = B576AA5219F920D0000A46EA /* KKBike.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				B576AA3C19F91EFD000A46EA /* KeiserKit.h in CopyFiles */,
+				B576AA3C19F91EFD000A46EA /* KKManager.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,10 +38,13 @@
 
 /* Begin PBXFileReference section */
 		B576AA3819F91EFD000A46EA /* libKeiserKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKeiserKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B576AA3B19F91EFD000A46EA /* KeiserKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeiserKit.h; sourceTree = "<group>"; };
-		B576AA3D19F91EFD000A46EA /* KeiserKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeiserKit.m; sourceTree = "<group>"; };
+		B576AA3B19F91EFD000A46EA /* KKManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKManager.h; sourceTree = "<group>"; };
+		B576AA3D19F91EFD000A46EA /* KKManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKManager.m; sourceTree = "<group>"; };
 		B576AA4319F91EFD000A46EA /* KeiserKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeiserKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B576AA4919F91EFD000A46EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B576AA5219F920D0000A46EA /* KKBike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKBike.m; sourceTree = "<group>"; };
+		B576AA5419F920DB000A46EA /* KKBike.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBike.h; sourceTree = "<group>"; };
+		B576AA5519F941B6000A46EA /* KKManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKManagerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +87,11 @@
 		B576AA3A19F91EFD000A46EA /* KeiserKit */ = {
 			isa = PBXGroup;
 			children = (
-				B576AA3B19F91EFD000A46EA /* KeiserKit.h */,
-				B576AA3D19F91EFD000A46EA /* KeiserKit.m */,
+				B576AA3B19F91EFD000A46EA /* KKManager.h */,
+				B576AA3D19F91EFD000A46EA /* KKManager.m */,
+				B576AA5219F920D0000A46EA /* KKBike.m */,
+				B576AA5419F920DB000A46EA /* KKBike.h */,
+				B576AA5519F941B6000A46EA /* KKManagerDelegate.h */,
 			);
 			path = KeiserKit;
 			sourceTree = "<group>";
@@ -193,7 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B576AA3E19F91EFD000A46EA /* KeiserKit.m in Sources */,
+				B576AA5319F920D0000A46EA /* KKBike.m in Sources */,
+				B576AA3E19F91EFD000A46EA /* KKManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
