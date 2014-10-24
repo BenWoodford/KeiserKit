@@ -60,6 +60,8 @@
             bike = [[KKBike alloc] initWithData:data];
             bike.RSSI = [RSSI intValue];
             bike.name = peripheral.name;
+            bike.peripheral = peripheral;
+            bike.identifier = peripheral.identifier;
             [self.scannedBikes addObject:bike];
         } else {
             [bike updateWithData:data];
@@ -77,6 +79,7 @@
         if(peripheral.identifier == self.followedBike.identifier) {
             [self.followedBike updateWithData:data];
             self.followedBike.name = peripheral.name;
+            self.followedBike.peripheral = peripheral;
             self.followedBike.RSSI = [RSSI intValue];
             [self.delegate followedBikeDidUpdate:self.followedBike];
         }

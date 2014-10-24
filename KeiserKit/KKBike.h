@@ -10,7 +10,7 @@
 
 @interface KKBike : NSObject
 
-@property (nonatomic, strong, readonly) CBPeripheral *peripheral;
+@property (nonatomic, strong) CBPeripheral *peripheral;
 @property (nonatomic, strong) NSUUID *identifier;
 @property (nonatomic, assign) int RSSI;
 @property (nonatomic, strong) NSString *name;
