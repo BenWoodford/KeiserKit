@@ -44,6 +44,7 @@ const NSRange GEAR_R = {18, 1};
     [data getBytes:&kCal range:KCAL_R];
     [data getBytes:&elapsedMinutes range:MINUTES_R];
     [data getBytes:&elapsedSeconds range:SECONDS_R];
+    [data getBytes:&gear range:GEAR_R];
     
     uint8_t dt_tmp;
     [data getBytes:&dt_tmp range:DATATYPE_R];
