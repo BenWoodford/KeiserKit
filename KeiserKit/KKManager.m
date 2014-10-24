@@ -12,6 +12,13 @@
 
 @synthesize centralManager, scanMode, scannedBikes, followedBike, delegate;
 
+- (id)initWithDelegate:(id<KKManagerDelegate>)del {
+    self = [self init];
+    self.delegate = delegate;
+    
+    return self;
+}
+
 - (id) init {
     if(self == [super self]) {
         self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];

@@ -19,6 +19,7 @@
 
 @property (nonatomic, assign) KKBike *followedBike;
 
+- (id)initWithDelegate:(id<KKManagerDelegate>)del;
 - (void)followBikeWithUUID:(NSUUID*)uuid;
 - (void)followBike:(KKBike*)bike;
 - (bool)startScanningForBikes;
