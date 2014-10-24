@@ -34,7 +34,7 @@
     
     self.scannedBikes = [[NSMutableArray alloc] init]; // Clear the scan array
     
-    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:NO], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
     [self.centralManager scanForPeripheralsWithServices:nil options:options];
     
     return true;
