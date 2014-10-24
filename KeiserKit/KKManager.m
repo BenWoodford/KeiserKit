@@ -103,6 +103,8 @@
 - (void)followBike:(KKBike *)bike {
     self.followedBike = bike;
     self.scanMode = Following;
+    
+    [self.delegate followedBikeDidUpdate:bike];
 }
 
 - (void)followBikeWithUUID:(NSUUID *)uuid {
