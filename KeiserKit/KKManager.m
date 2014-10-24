@@ -39,12 +39,12 @@
     if(![peripheral.name isEqualToString:@"M3"])
         return;
     
-    if(![[advertisementData allKeys] containsObject:@"kCBAdvDataManufacturerData"]) {
+    if(![[advertisementData allKeys] containsObject:CBAdvertisementDataManufacturerDataKey]) {
         NSLog(@"Advertisement Data does not contain Manufacturer Data.");
         return;
     }
     
-    NSData *data = [advertisementData objectForKey:@"kCBAdvDataManufacturerData"];
+    NSData *data = [advertisementData objectForKey:CBAdvertisementDataManufacturerDataKey];
     
     if(self.scanMode == Scanning) {
         KKBike *bike = [self getBikeWithUUID:peripheral.identifier];
