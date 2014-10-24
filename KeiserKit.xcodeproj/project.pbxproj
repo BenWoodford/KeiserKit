@@ -11,6 +11,7 @@
 		B576AA3E19F91EFD000A46EA /* KKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B576AA3D19F91EFD000A46EA /* KKManager.m */; };
 		B576AA4419F91EFD000A46EA /* libKeiserKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B576AA3819F91EFD000A46EA /* libKeiserKit.a */; };
 		B576AA5319F920D0000A46EA /* KKBike.m in Sources */ = {isa = PBXBuildFile; fileRef = B576AA5219F920D0000A46EA /* KKBike.m */; };
+		B59EDBF819FAAB770079AB78 /* CycleUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B59EDBF719FAAB770079AB78 /* CycleUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		B576AA5219F920D0000A46EA /* KKBike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKBike.m; sourceTree = "<group>"; };
 		B576AA5419F920DB000A46EA /* KKBike.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBike.h; sourceTree = "<group>"; };
 		B576AA5519F941B6000A46EA /* KKManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKManagerDelegate.h; sourceTree = "<group>"; };
+		B59EDBF719FAAB770079AB78 /* CycleUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleUtility.m; sourceTree = "<group>"; };
+		B59EDBF919FAAB810079AB78 /* CycleUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CycleUtility.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				B576AA5219F920D0000A46EA /* KKBike.m */,
 				B576AA5419F920DB000A46EA /* KKBike.h */,
 				B576AA5519F941B6000A46EA /* KKManagerDelegate.h */,
+				B59EDBF719FAAB770079AB78 /* CycleUtility.m */,
+				B59EDBF919FAAB810079AB78 /* CycleUtility.h */,
 			);
 			path = KeiserKit;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B576AA5319F920D0000A46EA /* KKBike.m in Sources */,
+				B59EDBF819FAAB770079AB78 /* CycleUtility.m in Sources */,
 				B576AA3E19F91EFD000A46EA /* KKManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +370,7 @@
 				B576AA4E19F91EFD000A46EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B576AA4F19F91EFD000A46EA /* Build configuration list for PBXNativeTarget "KeiserKitTests" */ = {
 			isa = XCConfigurationList;
@@ -372,6 +379,7 @@
 				B576AA5119F91EFD000A46EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

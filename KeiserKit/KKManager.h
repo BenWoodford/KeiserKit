@@ -23,6 +23,7 @@
 - (void)followBikeWithUUID:(NSUUID*)uuid;
 - (void)followBike:(KKBike*)bike;
 - (bool)startScanningForBikes;
+- (void)startSimulationWithBikes:(int)number;
 - (void)stopListening;
 - (void)stopFollowing;
 - (KKBike*)getBikeWithUUID:(NSUUID*)uuid;

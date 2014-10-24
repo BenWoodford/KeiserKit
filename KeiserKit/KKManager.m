@@ -7,6 +7,7 @@
 //
 
 #import "KKManager.h"
+#import "CycleUtility.h"
 
 @implementation KKManager
 
@@ -92,8 +93,29 @@
             return bike;
         }
     }
-    
+
     return nil;
+}
+
+- (void)startSimulationWithBikes:(int)number {
+    for(int i = 0; i < number; i++) {
+        KKBike *newBike = [[KKBike alloc] init];
+        [CycleUtility cycleBike:newBike];
+        [scannedBikes addObject:newBike];
+    }
+    [self.delegate bikeListUpdated:scannedBikes];
+}
+
+- (void)simulateRiding {
+    if(scanMode == Following) {
+        [CycleUtility cycleBike:followedBike];
+        [self.delegate followedBikeDidUpdate:followedBike];
+    } else {
+        for (KKBike *bike in scannedBikes) {
+            [CycleUtility cycleBike:bike];
+        }
+        [self.delegate bikeListUpdated:scannedBikes];
+    }
 }
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
