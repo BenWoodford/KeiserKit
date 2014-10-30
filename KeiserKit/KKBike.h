@@ -26,6 +26,8 @@
 @property (nonatomic, assign) int elapsedSeconds;
 @property (nonatomic, assign) float trip;
 @property (nonatomic, assign) int gear;
+@property (nonatomic, assign) float updateDelta;
+@property (nonatomic, assign) float lastUpdate;
 
 -(id)initWithData:(NSData*)data;
 -(void)updateWithData:(NSData*)data;

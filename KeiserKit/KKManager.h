@@ -16,6 +16,7 @@
 @property (nonatomic, strong) id<KKManagerDelegate> delegate;
 @property (nonatomic, retain) NSMutableArray *scannedBikes;
 @property (nonatomic, assign) enum {Scanning,Following} scanMode;
+@property (nonatomic, assign) bool isSimulating;
 
 @property (nonatomic, assign) KKBike *followedBike;
 

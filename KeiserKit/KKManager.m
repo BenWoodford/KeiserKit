@@ -9,7 +9,9 @@
 #import "KKManager.h"
 #import "CycleUtility.h"
 
-@implementation KKManager
+@implementation KKManager {
+    NSTimer *simTimer;
+}
 
 @synthesize centralManager, scanMode, scannedBikes, followedBike, delegate;
 
@@ -24,10 +26,12 @@
     if(self == [super self]) {
         self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     }
+    self.isSimulating = false;
     return self;
 }
 
 - (bool)startScanningForBikes {
+    self.isSimulating = false;
     if(self.centralManager.state != CBCentralManagerStatePoweredOn) {
         NSLog(@"CoreBluetooth is not ready!");
         return false;
@@ -70,6 +74,11 @@
             bike.RSSI = [RSSI intValue];
         }
         
+        if(bike.lastUpdate > 0)
+            bike.updateDelta = [[NSDate date] timeIntervalSince1970] - bike.lastUpdate;
+        
+        bike.lastUpdate = [[NSDate date] timeIntervalSince1970];
+        
         [self.delegate bikeListUpdated:self.scannedBikes];
     } else {
         if(!self.followedBike || self.followedBike == nil) {
@@ -82,6 +91,12 @@
             self.followedBike.name = peripheral.name;
             self.followedBike.peripheral = peripheral;
             self.followedBike.RSSI = [RSSI intValue];
+            
+            if(self.followedBike.lastUpdate > 0)
+                self.followedBike.updateDelta = [[NSDate date] timeIntervalSince1970] - self.followedBike.lastUpdate;
+            
+            self.followedBike.lastUpdate = [[NSDate date] timeIntervalSince1970];
+            
             [self.delegate followedBikeDidUpdate:self.followedBike];
         }
     }
@@ -103,7 +118,12 @@
         [CycleUtility cycleBike:newBike];
         [scannedBikes addObject:newBike];
     }
+    
+    self.isSimulating = true;
+    
     [self.delegate bikeListUpdated:scannedBikes];
+    
+    simTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(simulateRiding) userInfo:nil repeats:TRUE];
 }
 
 - (void)simulateRiding {
@@ -135,7 +155,12 @@
 }
 
 - (void)stopListening {
-    [self.centralManager stopScan];
+    if(self.isSimulating) {
+        [simTimer invalidate];
+        simTimer = nil;
+    } else {
+        [self.centralManager stopScan];
+    }
 }
 
 - (void)stopFollowing {
