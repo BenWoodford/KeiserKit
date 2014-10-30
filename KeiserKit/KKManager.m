@@ -31,6 +31,7 @@
 }
 
 - (bool)startScanningForBikes {
+    [self stopListening];
     self.isSimulating = false;
     if(self.centralManager.state != CBCentralManagerStatePoweredOn) {
         NSLog(@"CoreBluetooth is not ready!");
@@ -43,6 +44,25 @@
     [self.centralManager scanForPeripheralsWithServices:nil options:options];
     
     return true;
+}
+
+- (void)startSimulationWithBikes:(int)number {
+    [self.centralManager stopScan];
+    self.scannedBikes = [[NSMutableArray alloc] init]; // Clear the scan array
+    
+    for(int i = 0; i < number; i++) {
+        KKBike *newBike = [[KKBike alloc] init];
+        newBike.identifier = [NSUUID UUID];
+        newBike.bikeId = number+1;
+        [CycleUtility cycleBike:newBike];
+        [scannedBikes addObject:newBike];
+    }
+    
+    self.isSimulating = true;
+    
+    [self.delegate bikeListUpdated:scannedBikes];
+    
+    simTimer = [NSTimer scheduledTimerWithTimeInterval:[CycleUtility refresh] target:self selector:@selector(simulateRiding) userInfo:nil repeats:TRUE];
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
@@ -110,20 +130,6 @@
     }
 
     return nil;
-}
-
-- (void)startSimulationWithBikes:(int)number {
-    for(int i = 0; i < number; i++) {
-        KKBike *newBike = [[KKBike alloc] init];
-        [CycleUtility cycleBike:newBike];
-        [scannedBikes addObject:newBike];
-    }
-    
-    self.isSimulating = true;
-    
-    [self.delegate bikeListUpdated:scannedBikes];
-    
-    simTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(simulateRiding) userInfo:nil repeats:TRUE];
 }
 
 - (void)simulateRiding {

@@ -11,5 +11,5 @@
 @interface CycleUtility : NSObject
 
 + (void)cycleBike:(KKBike*)bike;
-
++ (float)refresh;
 @end

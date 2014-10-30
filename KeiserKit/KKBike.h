@@ -21,6 +21,7 @@
 @property (nonatomic, assign) float RPM;
 @property (nonatomic, assign) float heartRate;
 @property (nonatomic, assign) int power;
+@property (nonatomic, assign) float fkCal;
 @property (nonatomic, assign) int kCal;
 @property (nonatomic, assign) int elapsedMinutes;
 @property (nonatomic, assign) int elapsedSeconds;

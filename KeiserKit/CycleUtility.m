@@ -20,6 +20,10 @@ const float bikeRefresh = 2.0f;
 + (void)cycleBike:(KKBike*)bike {
     int effort = [CycleUtility effortPredictor];
     
+    if(bike.heartRate <= 0) {
+        bike.heartRate = (arc4random() % 40) + 60;
+    }
+    
     if(effort == 1) {
         if(bike.gear < 24)
             bike.gear++;
@@ -40,7 +44,8 @@ const float bikeRefresh = 2.0f;
     bike.power = (bike.gear / 64.0f) * bike.RPM;
     
     // I don't even know what these numbers are, I just stole them from Keiser's simulator.
-    bike.kCal += ((bike.power / 4.187f) * 4.0f * [CycleUtility refresh]) / 1000.0f;
+    bike.fkCal += ((bike.power / 4.187f) * 4.0f * [CycleUtility refresh]) / 1000.0f;
+    bike.kCal = bike.fkCal;
     bike.elapsedSeconds += [CycleUtility refresh];
     if(bike.elapsedSeconds >= 60) {
         bike.elapsedMinutes++;
@@ -56,6 +61,11 @@ const float bikeRefresh = 2.0f;
         if(bike.RSSI > -60)
             bike.RSSI--;
     }
+    
+    if(bike.lastUpdate > 0)
+        bike.updateDelta = CACurrentMediaTime() - bike.lastUpdate;
+    
+    bike.lastUpdate = CACurrentMediaTime();
 }
 
 + (int)effortPredictor {
