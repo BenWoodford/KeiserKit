@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KeiserKit"
-  s.version      = "1.4"
+  s.version      = "1.0"
   s.summary      = "Static Library for interfacing with the Keiser M3i Exercise Bike over Bluetooth Low Energy"
 
   s.description  = <<-DESC
