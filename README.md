@@ -2,17 +2,21 @@ You can find a sample project [here](https://github.com/BenWoodford/KeiserKit.gi
 
 To start tracking bikes, you need to make a delegate that implements KKManagerDelegate, and then init KKManager:
 
-```KKManager *manager = [[KKManager alloc] initWithDelegate:yourDelegateClass];```
+```
+KKManager *manager = [[KKManager alloc] initWithDelegate:yourDelegateClass];
+```
 
 You can start scanning straight away, but I'd recommend doing the scanning via user input and ensuring the Bluetooth state is on in bluetoothStateDidChange (in your delegate):
 
-```- (void)bluetoothStateDidChange:(CBCentralManagerState)state withManager:(KKManager *)manager {
+```
+- (void)bluetoothStateDidChange:(CBCentralManagerState)state withManager:(KKManager *)manager {
     if(state == CBCentralManagerStatePoweredOn) {
         // It's safe to scan
     } else {
         // There's many more [states to check for](https://developer.apple.com/library/IOs//documentation/CoreBluetooth/Reference/CBCentralManager_Class/index.html#//apple_ref/c/tdef/CBCentralManagerState) but this is a simple example.
     }
-}```
+}
+```
 
 Then you can start scanning with `[manager startScanningForBikes]` or simulate bikes with `[manager startSimulationWithBikes:aNumberOfBikes]`, the same methods will be called for updates either way.
  
