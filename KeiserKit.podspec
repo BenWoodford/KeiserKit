@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "KeiserKit", "KeiserKit/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
+  s.frameworks = 'QuartzCore'
 
   s.public_header_files = "KeiserKit/**/*.h"
 
