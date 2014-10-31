@@ -12,6 +12,7 @@
 		B576AA4419F91EFD000A46EA /* libKeiserKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B576AA3819F91EFD000A46EA /* libKeiserKit.a */; };
 		B576AA5319F920D0000A46EA /* KKBike.m in Sources */ = {isa = PBXBuildFile; fileRef = B576AA5219F920D0000A46EA /* KKBike.m */; };
 		B59EDBF819FAAB770079AB78 /* CycleUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B59EDBF719FAAB770079AB78 /* CycleUtility.m */; };
+		B5A870221A03A86D0011AB40 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A870211A03A86D0011AB40 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		B576AA5519F941B6000A46EA /* KKManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKManagerDelegate.h; sourceTree = "<group>"; };
 		B59EDBF719FAAB770079AB78 /* CycleUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleUtility.m; sourceTree = "<group>"; };
 		B59EDBF919FAAB810079AB78 /* CycleUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CycleUtility.h; sourceTree = "<group>"; };
+		B5A870211A03A86D0011AB40 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A870221A03A86D0011AB40 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +75,7 @@
 		B576AA2F19F91EFD000A46EA = {
 			isa = PBXGroup;
 			children = (
+				B5A870211A03A86D0011AB40 /* QuartzCore.framework */,
 				B576AA3A19F91EFD000A46EA /* KeiserKit */,
 				B576AA4719F91EFD000A46EA /* KeiserKitTests */,
 				B576AA3919F91EFD000A46EA /* Products */,

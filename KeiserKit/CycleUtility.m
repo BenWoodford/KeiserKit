@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CycleUtility.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation CycleUtility
 
