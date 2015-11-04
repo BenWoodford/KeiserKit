@@ -42,7 +42,7 @@
 
 - (id)initWithDelegate:(id<KKManagerDelegate>)del {
     self = [self init];
-    self.delegate = delegate;
+    self.delegate = del;
     
     return self;
 }
